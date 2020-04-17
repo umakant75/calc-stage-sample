@@ -37,7 +37,6 @@ stages:
       inputs:
         rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
         includeRootFolder: false
-      inputs:
         targetPath: '$(System.ArtifactsDirectory)'
 
 
