@@ -37,8 +37,9 @@ stages:
       inputs:
         rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
         includeRootFolder: false
-        targetPath: '$(System.ArtifactsDirectory)'
-
+    - task: PublishPipelineArtifact@0
+      inputs:
+          targetPath: '$(System.ArtifactsDirectory)'
 
 - stage: prod
   displayName: 'Prod'
