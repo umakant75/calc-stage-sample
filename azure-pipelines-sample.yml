@@ -58,8 +58,9 @@ stages:
               downloadPath: '$(System.DefaultWorkingDirectory)'
           - task: AzureWebApp@1
             inputs:
-              azureSubscription: $(prodConnection)
+              azureSubscription: 'Free Trial(e5d852a2-8798-447e-93f1-d012152d08fd)'
               appType: 'webAppLinux'
-              appName: $(prodApp)
+              appName: 'azmycals'
               runtimeStack: 'NODE|10.1'
               startUpCommand: 'npm run start'
+
