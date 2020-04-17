@@ -55,15 +55,6 @@ stages:
           - task: DownloadPipelineArtifact@1
             inputs:
               downloadPath: '$(System.DefaultWorkingDirectory)'
-          - task: DownloadBuildArtifacts@0
-            inputs:
-              buildType: 'specific'
-              project: '86da6a14-ffc9-457e-bc17-abc35fdde8aa'
-              pipeline: '12'
-              buildVersionToDownload: 'latest'
-              downloadType: 'single'
-              artifactName: 'PublishPipelineArtifact@0'
-              downloadPath: '$(System.ArtifactsDirectory)'
           - task: AzureWebApp@1
             inputs:
               azureSubscription: 'Free Trial(e5d852a2-8798-447e-93f1-d012152d08fd)'
